@@ -1,0 +1,25 @@
+repositories:
+    .github-private:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Member-only organization profile"
+    polaris-iam:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Gitops live repo for configuring IAM for all Polaris tooling"
+    polaris-live:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Gitops live repo with IaC for configuring all Polaris runtimes & shared services"
