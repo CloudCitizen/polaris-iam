@@ -14,7 +14,6 @@ jobs:
 
   github:
     concurrency: github
-    if: needs.pre_commit.result == 'success'
     uses: CloudCitizen/github-reusable-workflows/.github/workflows/terraform-plan.yaml@main
     with:
       file_path: "live/github"
