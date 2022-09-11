@@ -1,0 +1,26 @@
+name: polaris-iam PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pre_commit:
+    uses: CloudCitizen/github-workflows/.github/workflows/pre-commit.yaml@main
+
+  tfsec:
+    uses: CloudCitizen/github-workflows/.github/workflows/tfsec.yaml@main
+
+  github:
+    concurrency: github
+    if: needs.pre_commit.result == 'success'
+    uses: CloudCitizen/github-workflows/.github/workflows/terraform-plan.yaml@main
+    with:
+      file_path: "live/github"
+      scopes: "github:mgmt"
+      expose_github_token: true
+      github_token_variable: "GITHUB_TOKEN"
+    secrets:
+      AWS_REGION:          ${{ secrets.AWS_REGION }}
+      AWS_ACCOUNT_ID:      ${{ secrets.AWS_ACCOUNT_ID }}
