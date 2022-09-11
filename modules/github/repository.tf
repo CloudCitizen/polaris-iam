@@ -56,6 +56,9 @@ resource "github_team_repository" "teams_push_allowed" {
   team_id    = github_team.cloudcitizen_team[each.value.team].slug
   repository = each.value.repository
   permission = "push"
+  depends_on = [
+    github_repository.repo
+  ]
 }
 
 resource "github_repository_file" "codeowners" {
@@ -69,6 +72,9 @@ resource "github_repository_file" "codeowners" {
   commit_author       = "Terraform User"
   commit_email        = "terraform@cloudcitizen.eu"
   overwrite_on_create = true
+  depends_on = [
+    github_repository.repo
+  ]
 }
 
 resource "github_branch_protection" "repo_protect_main" {
@@ -89,6 +95,9 @@ resource "github_branch_protection" "repo_protect_main" {
     required_approving_review_count = 1
     require_code_owner_reviews      = true
   }
+  depends_on = [
+    github_repository.repo
+  ]
 }
 
 resource "github_repository_environment" "environment" {
@@ -107,14 +116,4 @@ resource "github_repository_environment" "environment" {
   depends_on = [
     github_repository.repo
   ]
-}
-
-moved {
-  from = github_repository.repo["wkl-exploration"]
-  to   = github_repository.repo["wkl-model-exploration"]
-}
-
-moved {
-  from = github_repository.repo["wkl-model-development"]
-  to   = github_repository.repo["wkl-model-execution"]
 }

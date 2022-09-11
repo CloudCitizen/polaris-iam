@@ -3,8 +3,8 @@
 **/modules/*.terraform.lock.hcl
 
 # .tfstate files
-*.tfstate
-*.tfstate.*
+# *.tfstate
+# *.tfstate.*
 
 # terragrunt files
 *.terragrunt-cache

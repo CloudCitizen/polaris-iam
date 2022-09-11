@@ -23,3 +23,67 @@ repositories:
         codeowners: |
             * @CloudCitizen/Infrastructure
         description: "Gitops live repo with IaC for configuring all Polaris runtimes & shared services"
+    aft-account-customizations:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for AFT account customizations"
+        gitignore_template: "Terraform"
+    aft-account-provisioning-customizations:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for AFT account provisioning customizations"
+        gitignore_template: "Terraform"
+    aft-account-request:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for AFT account requests"
+        gitignore_template: "Terraform"
+    aft-global-customizations:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for AFT global customizations"
+        gitignore_template: "Terraform"
+    polaris-bootstrap:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Terraform bootstrap configuration for Polaris"
+        gitignore_template: "Terraform"
+    polaris-container-images:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Place for all Polaris <helper> container images"
+    polaris-shared-networking:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template: "Terraform"
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Terraform project for managing the Polaris shared networking account"
+    polaris-logging:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template: "Terraform"
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Terraform project to manage the Polaris logging account"
