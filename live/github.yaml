@@ -72,6 +72,15 @@ repositories:
             * @CloudCitizen/Infrastructure
         description: "Used for AFT global customizations"
         gitignore_template: "Terraform"
+    github-action-token:
+        visibility: public
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for the github token action"
+        gitignore_template:
     polaris-bootstrap:
         teams_pull_allowed: []
         teams_push_allowed: ["Infrastructure"]
