@@ -7,15 +7,15 @@ on:
 
 jobs:
   pre_commit:
-    uses: CloudCitizen/github-workflows/.github/workflows/pre-commit.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/pre-commit.yaml@main
 
   tfsec:
-    uses: CloudCitizen/github-workflows/.github/workflows/tfsec.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/tfsec.yaml@main
 
   github:
     concurrency: github
     if: needs.pre_commit.result == 'success'
-    uses: CloudCitizen/github-workflows/.github/workflows/terraform-plan.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/terraform-plan.yaml@main
     with:
       file_path: "live/github"
       scopes: "github:mgmt"

@@ -15,6 +15,15 @@ repositories:
         codeowners: |
             * @CloudCitizen/Infrastructure
         description: "Repo to store all reusable Github workflows"
+    github-reusable-workflows:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        visibility: public
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Repo to store all reusable Github workflows"
     polaris-iam:
         teams_pull_allowed: []
         teams_push_allowed: ["Infrastructure"]
