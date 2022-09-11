@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  # pre_commit:
-  #   uses: CloudCitizen/github-reusable-workflows/.github/workflows/pre-commit.yaml@main
+  pre_commit:
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/pre-commit.yaml@main
 
   tfsec:
     uses: CloudCitizen/github-reusable-workflows/.github/workflows/tfsec.yaml@main
