@@ -4,6 +4,8 @@ repositories:
         teams_push_allowed: ["Infrastructure"]
         type: plain
         gitignore_template:
+        codeowners: |
+            * @CloudCitizen/Infrastructure
         description: "Member-only organization profile"
     github-workflows:
         teams_pull_allowed: []
