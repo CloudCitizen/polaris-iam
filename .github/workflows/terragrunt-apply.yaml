@@ -1,9 +1,12 @@
 name: polaris-iam PR
 
 on:
-  pull_request:
+  push:
     branches:
       - main
+    paths-ignore:
+      - "*.md"
+      - ".gitignore"
 
 jobs:
   github:
