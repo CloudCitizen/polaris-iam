@@ -1,4 +1,4 @@
-name: polaris-iam PR
+name: polaris-iam apply
 
 on:
   push:
