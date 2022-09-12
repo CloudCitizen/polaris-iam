@@ -1,5 +1,4 @@
 resource "github_organization_webhook" "datadog" {
-  name = "datadog"
 
   configuration {
     url          = "https://app.datadoghq.eu/intake/webhook/github?api_key=92c52db3939defb5fa4a514801e994ac"
