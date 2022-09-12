@@ -7,8 +7,7 @@ from functools import partialmethod
 class OIDCClient(object):
     def _get_private_key_from_secret(self, secret_id):
         sm_client = boto3.client("secretsmanager", region_name="eu-central-1")
-        get_secret_value_response = sm_client.get_secret_value(
-            SecretId=secret_id)
+        get_secret_value_response = sm_client.get_secret_value(SecretId=secret_id)
         private_key = get_secret_value_response["SecretString"]
         return private_key
 

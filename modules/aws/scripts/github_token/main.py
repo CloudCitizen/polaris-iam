@@ -198,8 +198,7 @@ def lambda_handler(event, context):
                         "statusCode": 403,
                     }
 
-            tokens[app] = oidc_client.get_token(
-                github_org, token_request=request)
+            tokens[app] = oidc_client.get_token(github_org, token_request=request)
         else:
             return {
                 "statusCode": 400,
