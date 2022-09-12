@@ -15,6 +15,15 @@ repositories:
         codeowners: |
             * @CloudCitizen/Infrastructure
         description: "Repo to store all reusable Github workflows"
+    github-reusable-workflows:
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        gitignore_template:
+        visibility: public
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Repo to store all reusable Github workflows"
     polaris-iam:
         teams_pull_allowed: []
         teams_push_allowed: ["Infrastructure"]
@@ -63,6 +72,15 @@ repositories:
             * @CloudCitizen/Infrastructure
         description: "Used for AFT global customizations"
         gitignore_template: "Terraform"
+    github-action-token:
+        visibility: private
+        teams_pull_allowed: []
+        teams_push_allowed: ["Infrastructure"]
+        type: plain
+        codeowners: |
+            * @CloudCitizen/Infrastructure
+        description: "Used for the github token action"
+        gitignore_template:
     polaris-bootstrap:
         teams_pull_allowed: []
         teams_push_allowed: ["Infrastructure"]

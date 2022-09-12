@@ -7,20 +7,16 @@ on:
 
 jobs:
   pre_commit:
-    uses: CloudCitizen/github-workflows/.github/workflows/pre-commit.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/pre-commit.yaml@testworkflows
 
   tfsec:
-    uses: CloudCitizen/github-workflows/.github/workflows/tfsec.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/tfsec.yaml@testworkflows
 
   github:
     concurrency: github
-    if: needs.pre_commit.result == 'success'
-    uses: CloudCitizen/github-workflows/.github/workflows/terraform-plan.yaml@main
+    uses: CloudCitizen/github-reusable-workflows/.github/workflows/terraform-plan.yaml@testworkflows
     with:
       file_path: "live/github"
-      scopes: "github:mgmt"
-      expose_github_token: true
-      github_token_variable: "GITHUB_TOKEN"
     secrets:
       AWS_REGION:          ${{ secrets.AWS_REGION }}
       AWS_ACCOUNT_ID:      ${{ secrets.AWS_ACCOUNT_ID }}
