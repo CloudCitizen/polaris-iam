@@ -113,11 +113,3 @@ repositories:
         codeowners: |
             * @CloudCitizen/Infrastructure
         description: "Terraform project to manage the Polaris logging account"
-    polaris-test:
-        teams_pull_allowed: []
-        teams_push_allowed: ["Infrastructure"]
-        type: plain
-        gitignore_template: "Terraform"
-        codeowners: |
-            * @CloudCitizen/Infrastructure
-        description: "Just a test"
