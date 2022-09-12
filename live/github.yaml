@@ -73,7 +73,7 @@ repositories:
         description: "Used for AFT global customizations"
         gitignore_template: "Terraform"
     github-action-token:
-        visibility: public
+        visibility: private
         teams_pull_allowed: []
         teams_push_allowed: ["Infrastructure"]
         type: plain
